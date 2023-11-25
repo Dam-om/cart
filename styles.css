@@ -61,6 +61,9 @@ img {
 .cartq {
   width: 35%;
 }
+.delbtn{
+  margin-top:10px
+}
 .cartqinput {
   margin-right: 25px;
   padding: 0;
