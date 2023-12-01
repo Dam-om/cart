@@ -86,7 +86,7 @@ function updateCartTotal() {
 }
 function purchaseItem() {
   if (total == undefined) {
-    total = `  0`;
+    total = `0`;
   }
   alert(`Purchase Complete 
   Total Price = ${"$" + " " + total}
