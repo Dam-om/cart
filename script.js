@@ -1,3 +1,6 @@
+if ( document.readyState == "loading"){document.addEventListener("DOMContentLoaded" , ready);}
+else{ready();}
+function ready(){
 let del = document.getElementsByClassName("delbtn");
 for (let i = 0; i < del.length; i++) {
   btt = del[i];
@@ -16,6 +19,7 @@ for (let i = 0; i < addBtn.length; i++) {
 }
 let purchaseBtn = document.getElementsByClassName("purchase")[0];
 purchaseBtn.addEventListener("click", purchaseItem);
+}
 function addItems(event) {
   let addBtt = event.target;
   let items = addBtt.parentElement;
@@ -24,7 +28,7 @@ function addItems(event) {
   let price = items.getElementsByClassName("itemPrice")[0].innerText;
   addItemsCart(names, price, image);
   updateCartTotal();
-}
+} 
 function addItemsCart(names, price, image) {
   let cartRow = document.createElement("div");
   cartRow.classList.add("cart-row");
@@ -82,7 +86,7 @@ function updateCartTotal() {
 }
 function purchaseItem() {
   if (total == undefined) {
-    total = ` $ 0`;
+    total = `  0`;
   }
   alert(`Purchase Complete 
   Total Price = ${"$" + " " + total}
